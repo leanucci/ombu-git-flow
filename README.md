@@ -36,8 +36,13 @@ Or to simplify it:
 
 Note: This means that commits 1 thu 4 are present everywhere, commits 5 and 6 only in Ernesto's laptop's master branch, and commits 7 and 8 in Leandro's master branch. Also, the arrows point back in time, meaning C1 was the first commit, followed by C2 and so on. Captain Obvious out.
 
-### Time to push: Fast Forward
+## Time to push: Fast Forward
 
 The wole point of this tutorial is to teach a way to keep each local repository "fast-forward" with the copy in Github, and vice versa.
 
-Fast Forward is something git does when, between two branches, the first new commit in one of the branches follows the last commit in the other branch. Awful complicated to write, but if you take a look at Figure 3, it's pretty obvious: ```Ernesto/master``` and ```Leandro/master``` are both **fast forward** with ```github/master```. Don't panic, let it soak.
+A ```branch A``` is **Fast Forward** with another ```branch B``` when the first new commit in ```branch A``` follows the last commit in ```branch B```. 
+
+Awful complicated to read. If you take a look at Figure 3, it's pretty obvious: ```Ernesto/master``` and ```Leandro/master``` are both **fast forward** with ```github/master```. Don't panic, let it soak.
+
+### How achieve Fast Forward?
+<img src="http://cdn.memegenerator.net/instances/400x/31279473.jpg" alt="Y U NO Fast-Forward?">
