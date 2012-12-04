@@ -7,13 +7,19 @@ There are plenty of ways to use git to manage a project's source code, and OmbuS
 Don't use ```git pull```. It messes with our pretty commit tree.
 
 ### Before recording new commits:
+
 ```git fetch```
+
 ```git merge origin/master --ff-only```
+
 #### If the merge is not possible due to non fast forward local branch:
+
 ```git rebase origin/master```
 
 ### Before pushing your commits to github:
+
 ```git fetch```
+
 ```git rebase origin/master```
 
 The rationale for this is:
