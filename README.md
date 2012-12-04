@@ -3,6 +3,21 @@ Git is a powerful tool. Git is your friend. In OmbuShop we like friends.
 
 There are plenty of ways to use git to manage a project's source code, and OmbuShop's way is pretty simple.
 
+## **TL;DR**
+Don't use ```git pull```. It messes with our pretty commit tree.
+
+### Before recording new commits:
+```git fetch```
+```git merge origin/master --ff-only```
+#### If the merge is not possible due to non fast forward local branch:
+```git rebase origin/master```
+
+### Before pushing your commits to github:
+```git fetch```
+```git rebase origin/master```
+
+The rationale for this is:
+
 ## Background
 ### The ```master``` branch
 We work by making changes to this branch, and then issuing the ```git commit``` command to record those changes, one after another, then, we ```git push``` them to Github to share them with the team, for backup purposes, to deploy the code to the server and our users. So far so good.
