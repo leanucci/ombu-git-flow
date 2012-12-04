@@ -15,7 +15,7 @@ We work by making changes to this branch, and then issuing the ```git commit``` 
 	                    |
 	                git commit
 
-### Doing some work
+### After one day of work...
 
 Now lets assume this: it's monday, we're all getting ready to start another epic week of work, and Ernesto and Leandro start working. After a couple hours, this is what Github, Ernesto and Leandro's repositories all look like, before any ```git push``` command is run:
 
@@ -36,7 +36,7 @@ Or to simplify it:
 
 Note: This means that commits 1 thu 4 are present everywhere, commits 5 and 6 only in Ernesto's laptop's master branch, and commits 7 and 8 in Leandro's master branch. Also, the arrows point back in time, meaning C1 was the first commit, followed by C2 and so on. Captain Obvious out.
 
-## Time to push: Fast Forward
+### Time to push: Fast Forward
 
 The wole point of this tutorial is to teach a way to keep each local repository "fast-forward" with the copy in Github, and vice versa.
 
@@ -44,7 +44,7 @@ A ```branch A``` is **Fast Forward** with another ```branch B``` when the first 
 
 Awful complicated to read. If you take a look at Figure 3, it's pretty obvious: ```Ernesto/master``` and ```Leandro/master``` are both **fast forward** with ```origin/master```. Don't panic, let it soak.
 
-### How achieve Fast Forward?
+## Making branches fast-forwardable
 
 When getting updates from origin, instead of ```git pull``` use  ```git fetch``` followed by ```git merge origin/master --ff-only```. This ensures that your local ```master``` branch will be updated only with fast forward merges.
 
